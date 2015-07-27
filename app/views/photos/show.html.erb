@@ -1,0 +1,27 @@
+<h1>Photo</h1>
+
+<p>
+  <strong>Public:</strong>
+  <%= @photo.public %>
+</p>
+
+<p>
+  <strong>Caption:</strong>
+  <%= @photo.caption %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @photo.image %>
+</p>
+
+<hr><br>
+
+<h2>Comments</h2>
+<%= render @photo.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Back', photos_path %>

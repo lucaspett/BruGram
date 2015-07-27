@@ -1,0 +1,23 @@
+<h1>Listing Photos</h1>
+<%= link_to 'New photo', new_photo_path %>
+<table>
+  <tr>
+    <th>Public</th>
+    <th>Caption</th>
+    <th>Image</th>
+    <th colspan="3"></th>
+  </tr>
+ 
+  <% @photos.each do |photo| %>
+    <tr>
+      <td><%= photo.public %></td>
+      <td><%= photo.caption %></td>
+      <td><%= photo.image %></td>
+      <td><%= link_to 'Show', photo_path(photo) %></td>
+      <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
+      <td><%= link_to 'Destroy', photo_path(photo),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
