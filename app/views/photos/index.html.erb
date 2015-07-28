@@ -12,7 +12,7 @@
     <tr>
       <td><%= photo.public %></td>
       <td><%= photo.caption %></td>
-      <td><%= photo.image %></td>
+      <td><%= image_tag photo.image %></td>
       <td><%= link_to 'Show', photo_path(photo) %></td>
       <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
       <td><%= link_to 'Destroy', photo_path(photo),
@@ -21,3 +21,4 @@
     </tr>
   <% end %>
 </table>
+
