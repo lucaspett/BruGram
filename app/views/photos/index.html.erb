@@ -9,6 +9,7 @@
   </tr>
  
   <% @photos.each do |photo| %>
+    <% if photo.public == true || photo.user == current_user %>
     <tr>
       <td><%= photo.public %></td>
       <td><%= photo.caption %></td>
@@ -19,6 +20,7 @@
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
     </tr>
+    <% end %>
   <% end %>
 </table>
 
