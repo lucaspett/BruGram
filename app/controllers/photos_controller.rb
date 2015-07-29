@@ -48,7 +48,7 @@ class PhotosController < ApplicationController
 
   def require_permission
     if current_user != Photo.find(params[:id]).user
-      redirect_to photos_path
+      redirect_to photos_path, alert: "You cannot access this picture!"
     end
   end
 
