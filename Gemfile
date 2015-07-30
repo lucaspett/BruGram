@@ -39,7 +39,7 @@ gem 'pg'
 
 gem 'rails_12factor', group: :production
 
-gem 'puma'
+gem 'omniauth-facebook'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
