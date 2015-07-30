@@ -2,7 +2,7 @@ class PhotosController < ApplicationController
   before_action :require_permission, only: [:edit, :update, :destroy]
 
   def index
-    @photos = Photo.all
+    @photos = Photo.all.order(created_at: :desc)
   end
   
   def show
@@ -53,6 +53,6 @@ class PhotosController < ApplicationController
   end
 
   def photo_params
-    params.require(:photo).permit(:public, :caption, :image, :user_id)
+    params.require(:photo).permit(:public, :caption, :image)
   end
 end

@@ -43,9 +43,9 @@ gem 'omniauth-facebook'
 #Bootstrap
 gem 'twitter-bootstrap-rails'
 #Glyphicons
-gem "bootstrap-glyphicons"
+gem 'bootstrap-glyphicons'
 #fontawesome
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

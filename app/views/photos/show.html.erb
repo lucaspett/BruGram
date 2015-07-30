@@ -1,4 +1,4 @@
-<h1>Photo</h1>
+<h1>View the Bru</h1>
 
 <p>
   <strong>Public:</strong>
@@ -8,10 +8,11 @@
 <p>
   <strong>Caption:</strong>
   <%= @photo.caption %>
+  <p>Submitted by <%= @photo.user.email %></p>
 </p>
 
 <p>
-  <strong>Image:</strong>
+  <strong></strong>
   <%= image_tag @photo.image %>
 </p>
 
