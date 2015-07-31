@@ -1,6 +1,7 @@
-<h1>Photo Feed</h1>
-<%= link_to 'New Bru' , new_photo_path, class: 'btn btn-success' do %>
-  <i class="glyphicon glyphicon-pencil"></i>
+<h2>Bru<i class="glyphicon glyphicon-picture"></i>Feed</h2>
+<%= link_to new_photo_path, class: 'btn btn-success' do %>
+  <i class="glyphicon glyphicon-pencil"></i> New Bru
+<% end %>
 <br> <br>
 <table class="table">
   <tr>
@@ -14,11 +15,20 @@
     <tr>
       <td class="col-md-4"><%= photo.caption %><br><br><br><p>Submitted by <%= photo.user.email %></p></td>
       <td><%= image_tag photo.image, :class => 'photo-display' %></td>
-      <td><%= link_to 'Show', photo_path(photo), class: 'btn btn-default' %></td>
-      <td><%= link_to 'Edit', edit_photo_path(photo), class: 'btn btn-default' %></td>
-      <td><%= link_to 'Destroy', photo_path(photo), class: 'btn btn-default',
+      <td><%= link_to photo_path(photo), class: 'btn btn-default' do %>
+        Show <i class="glyphicon glyphicon-folder-open"></i>
+      <% end %>
+      </td>
+      <td><%= link_to edit_photo_path(photo), class: 'btn btn-default' do %>
+        Edit <i class="glyphicon glyphicon-edit"></i>
+      <% end %>
+      </td>
+      <td><%= link_to photo_path(photo), class: 'btn btn-default',
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
+              data: { confirm: 'Are you sure?' } do %>
+        Destroy <i class="glyphicon glyphicon-trash"></i>
+      <% end %>
+      </td>
     </tr>
     <% end %>
   <% end %>
